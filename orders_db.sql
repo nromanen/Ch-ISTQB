@@ -5,7 +5,7 @@
 -- Dumped from database version 11.2
 -- Dumped by pg_dump version 11.2
 
--- Started on 2019-05-17 10:40:58
+-- Started on 2019-05-17 11:16:24
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -152,6 +152,19 @@ COPY public.customers (user_id, location_id) FROM stdin;
 333	323
 334	324
 335	325
+403	320
+404	321
+405	322
+406	323
+407	324
+408	325
+409	326
+410	327
+411	328
+412	329
+490	330
+491	320
+500	321
 \.
 
 
@@ -550,7 +563,7 @@ ALTER TABLE ONLY public.users
     ADD CONSTRAINT users_location FOREIGN KEY (location_id) REFERENCES public.locations(id);
 
 
--- Completed on 2019-05-17 10:40:58
+-- Completed on 2019-05-17 11:16:25
 
 --
 -- PostgreSQL database dump complete
