@@ -5,7 +5,7 @@
 -- Dumped from database version 11.2
 -- Dumped by pg_dump version 11.2
 
--- Started on 2019-05-17 11:49:29
+-- Started on 2019-05-17 15:30:01
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -141,7 +141,7 @@ CREATE TABLE public.users (
 ALTER TABLE public.users OWNER TO postgres;
 
 --
--- TOC entry 2873 (class 0 OID 66554)
+-- TOC entry 2872 (class 0 OID 66554)
 -- Dependencies: 196
 -- Data for Name: customers; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -169,7 +169,7 @@ COPY public.customers (user_id, location_id) FROM stdin;
 
 
 --
--- TOC entry 2874 (class 0 OID 66557)
+-- TOC entry 2873 (class 0 OID 66557)
 -- Dependencies: 197
 -- Data for Name: employees; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -202,7 +202,7 @@ COPY public.employees (user_id, chief_id, birth_date, hire_date, address, locati
 
 
 --
--- TOC entry 2875 (class 0 OID 66563)
+-- TOC entry 2874 (class 0 OID 66563)
 -- Dependencies: 198
 -- Data for Name: locations; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -222,7 +222,7 @@ COPY public.locations (id, city, country) FROM stdin;
 
 
 --
--- TOC entry 2876 (class 0 OID 66569)
+-- TOC entry 2875 (class 0 OID 66569)
 -- Dependencies: 199
 -- Data for Name: ordered_products; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -242,7 +242,7 @@ COPY public.ordered_products (orders_id, products_id, historical_price, quantity
 
 
 --
--- TOC entry 2877 (class 0 OID 66575)
+-- TOC entry 2876 (class 0 OID 66575)
 -- Dependencies: 200
 -- Data for Name: orders; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -262,7 +262,7 @@ COPY public.orders (id, customer_id, product_name_id, order_date, responsible_em
 
 
 --
--- TOC entry 2878 (class 0 OID 66578)
+-- TOC entry 2877 (class 0 OID 66578)
 -- Dependencies: 201
 -- Data for Name: products; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -282,7 +282,7 @@ COPY public.products (id, product_name, product_category_id, unit_price, locatio
 
 
 --
--- TOC entry 2879 (class 0 OID 66584)
+-- TOC entry 2878 (class 0 OID 66584)
 -- Dependencies: 202
 -- Data for Name: products_categories; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -296,7 +296,7 @@ COPY public.products_categories (id, category_name) FROM stdin;
 
 
 --
--- TOC entry 2880 (class 0 OID 66590)
+-- TOC entry 2879 (class 0 OID 66590)
 -- Dependencies: 203
 -- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -516,16 +516,7 @@ ALTER TABLE ONLY public.employees
 
 
 --
--- TOC entry 2749 (class 2606 OID 66644)
--- Name: products location; Type: FK CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.products
-    ADD CONSTRAINT location FOREIGN KEY (location_id) REFERENCES public.locations(id);
-
-
---
--- TOC entry 2750 (class 2606 OID 66649)
+-- TOC entry 2749 (class 2606 OID 66649)
 -- Name: products location_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -570,7 +561,7 @@ ALTER TABLE ONLY public.employees
 
 
 --
--- TOC entry 2751 (class 2606 OID 66674)
+-- TOC entry 2750 (class 2606 OID 66674)
 -- Name: users users_location; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -578,7 +569,7 @@ ALTER TABLE ONLY public.users
     ADD CONSTRAINT users_location FOREIGN KEY (location_id) REFERENCES public.locations(id);
 
 
--- Completed on 2019-05-17 11:49:29
+-- Completed on 2019-05-17 15:30:02
 
 --
 -- PostgreSQL database dump complete
