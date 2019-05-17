@@ -5,7 +5,7 @@
 -- Dumped from database version 11.2
 -- Dumped by pg_dump version 11.2
 
--- Started on 2019-05-17 11:16:24
+-- Started on 2019-05-17 11:49:29
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -183,6 +183,21 @@ COPY public.employees (user_id, chief_id, birth_date, hire_date, address, locati
 308	306	1985-04-09	2007-04-13	2111  Meadowcrest Lane	328
 309	306	1989-01-26	2010-07-13	3990  High Meadow Lane	329
 310	306	1991-07-22	2010-02-27	3494  Cinnamon Lane	330
+401	490	2014-03-03	2019-11-18	25 A Burgess St, Kings Beach, QLD 4551	323
+402	403	2010-01-09	2018-03-22	7 Weetunga St, Fulham, SA 5024	327
+403	500	2006-11-17	2017-02-13	29243 Pacific Coast Hwy, Malibu, CA, 90265	321
+404	490	2006-02-13	2013-06-27	13882 191st Ave NW, Elk River, MN, 55330	321
+405	490	1993-10-25	2011-06-16	790 S Main St, Lima, OH, 45804	322
+406	490	1990-07-09	2010-10-28	240 Hospital Ln, Jellico, TN, 37762	323
+407	490	1984-11-24	2009-01-15	23 E 2nd Ave, Huntingdon, TN, 38344	324
+408	491	1983-07-17	2007-03-14	316 Geneva Dr, Culver, OR, 97734	325
+409	491	1980-06-06	2003-10-15	23141 20th Hwy, Waterloo, AL, 35677	326
+410	491	1959-09-14	2003-10-03	608 SW 8th St, Bentonville, AR, 72712	327
+411	491	1955-12-16	2003-06-02	1470 Forbes St, East Hartford, CT, 06118	328
+412	403	1950-09-03	2002-08-19	377 Cooper Mission Rd, Ward, AL, 36922	329
+490	500	1950-06-27	2000-04-14	45 Baif Richmond Hill ON L4C 5N8	330
+491	500	1948-10-11	1997-12-26	15 Dalton Cres S Orillia ON L3V 5J7	325
+500	\N	1940-08-12	1997-05-05	244 Victoria Ln , Arnstein, ON, P0H	321
 \.
 
 
@@ -563,7 +578,7 @@ ALTER TABLE ONLY public.users
     ADD CONSTRAINT users_location FOREIGN KEY (location_id) REFERENCES public.locations(id);
 
 
--- Completed on 2019-05-17 11:16:25
+-- Completed on 2019-05-17 11:49:29
 
 --
 -- PostgreSQL database dump complete
