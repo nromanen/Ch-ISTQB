@@ -1,0 +1,133 @@
+// SQL COMMANDS
+_______________________________________________________________________________________
+
+// SQL column creation
+
+ALTER TABLE products_categories
+ADD id integer,
+ADD category_name character varying
+
+_______________________________________________________________________________________
+
+// Insert multiple rows into table query
+
+INSERT INTO locations (id, city, country)
+VALUES  (321, 'London', 'Great Britain'),
+	(322, 'Paris', 'France'),
+	(323, 'Berlin', 'Germany'),
+	(324, 'Marseille', 'France'),
+	(325, 'Strasbourg', 'France'),
+	(326, 'Bordeaux', 'France'),
+	(327, 'Barcelona', 'Spain'),
+	(328, 'Madrid', 'Spain'),
+	(329, 'Dortmund', 'Germany'),
+	(330, 'Antwerp', 'Belgium')
+
+________________________________________________________________________________________
+
+// Change column types SQL command
+
+ALTER TABLE employees
+ALTER COLUMN hire_date TYPE DATE USING (trim(hire_date)::DATE)
+
+_________________________________________________________________________________________
+
+// Insert rows into Employees
+
+INSERT INTO employees (user_id, chief_id, birth_date, hire_date, address, location_id)
+VALUES  (302, 301, '1971-02-20', '1994-05-23', '1496  Pooz Street', 322),
+	(303, 301, '1971-05-27', '1994-09-29', '2134  Woodland Drive', 323),
+	(304, 301, '1976-01-29', '1994-11-17', '600  Cimmaron Road', 324), 
+	(305, 301, '1981-05-11', '2007-03-10', '411  West Drive', 325), 
+	(307, 306, '1984-03-20', '2004-03-10', '2929  Bassel Street', 327),
+	(308, 306, '1985-04-09', '2007-04-13', '2111  Meadowcrest Lane', 328),
+	(309, 306, '1989-01-26', '2010-07-13', '3990  High Meadow Lane', 329),
+	(310, 306, '1991-07-22', '2010-02-27', '3494  Cinnamon Lane', 330)
+
+___________________________________________________________________________________________
+TASKS - SQL COMMANDS INSERTS
+___________________________________________________________________________________________
+
+// 5 - Calculate the count of employees from ...
+
+SELECT COUNT(employees.user_id) AS number_of_employees
+FROM employees
+JOIN users ON users.id = employees.user_id
+JOIN locations ON locations.id = users.location_id
+WHERE locations.country = 'France'
+
+___________________________________________________________________________________________
+
+// 11 - Show the list of all cities where the employees are from
+
+SELECT users.first_name AS employee_name, users.last_name AS employee_surname, locations.city AS city
+FROM employees
+JOIN users ON users.id = employees.user_id
+JOIN locations ON locations.id = users.location_id
+
+SELECT DISTINCT locations.country AS country
+FROM employees
+JOIN users ON users.id = employees.user_id
+JOIN locations ON locations.id = users.location_id
+
+________________________________________________________________________________________________
+
+// 17 - Show the count of orders made by each customer from 'France'
+
+SELECT COUNT(orders.id) AS number_of_orders
+FROM orders
+JOIN customers ON customers.user_id = orders.customer_id
+JOIN users ON users.id = customers.user_id
+JOIN locations ON locations.id = users.location_id
+WHERE locations.country = 'France'
+
+SELECT COUNT(orders.id) AS number_of_orders
+FROM orders
+JOIN customers ON customers.user_id = orders.customer_id
+JOIN users ON users.id = customers.user_id
+JOIN locations ON locations.id = users.location_id
+WHERE locations.country = 'France'
+GROUP BY customers.user_id
+
+________________________________________________________________________________________________
+
+// 23 - Show the list of french customer's names who used to order non-french products (use a subquery)
+
+SELECT users.first_name AS customer_name, users.last_name AS customer_last_name, 
+ul.country AS customer_country, pl.country AS product_country_of_origin
+FROM orders
+JOIN customers ON customers.user_id = orders.customer_id
+JOIN users ON users.id = customers.user_id
+JOIN locations AS ul ON ul.id = users.location_id
+JOIN products ON products.id = orders.product_name_id
+JOIN locations AS pl ON pl.id = products.location_id
+WHERE ul.country = 'France'
+AND pl.country <> 'France'
+
+___________________________________________________________________________________________________
+
+// 29 - Show the list of employees' names along with names of their chiefs (use left join within the same table)
+
+SELECT eid.first_name AS employee_name, eid.last_name AS employee_surname, 
+cid.first_name AS chief_name, cid.last_name AS chief_surmname
+FROM employees
+LEFT JOIN users AS eid ON eid.id = employees.user_id
+LEFT JOIN users AS cid ON cid.id = employees.chief_id
+
+_______________________________________________________________________________________________________
+
+// 35 - Delete one of your records
+
+DELETE FROM users
+WHERE id = 1000
+
+_______________________________________________________________________________________________________
+
+// 32 - Getch the records you have inserted by the SELECT statement
+
+SELECT users.first_name AS employee_name, users.last_name AS employee_surname, locations.city AS city
+FROM employees
+JOIN users ON users.id = employees.user_id
+JOIN locations ON locations.id = users.location_id
+OFFSET 2 ROWS
+FETCH NEXT 2 ROWS ONLY

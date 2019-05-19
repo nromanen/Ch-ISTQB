@@ -5,7 +5,7 @@
 -- Dumped from database version 10.7
 -- Dumped by pg_dump version 11.2
 
--- Started on 2019-05-16 23:10:48
+-- Started on 2019-05-19 22:08:20
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -150,6 +150,7 @@ INSERT INTO public.customers (user_id) VALUES (332);
 INSERT INTO public.customers (user_id) VALUES (333);
 INSERT INTO public.customers (user_id) VALUES (334);
 INSERT INTO public.customers (user_id) VALUES (335);
+INSERT INTO public.customers (user_id) VALUES (1001);
 
 
 --
@@ -220,6 +221,7 @@ INSERT INTO public.orders (id, customer_id, product_name_id, order_date, respons
 INSERT INTO public.orders (id, customer_id, product_name_id, order_date, responsible_employee, delivery_location) VALUES (388, 333, 368, '2007-11-26', 310, 328);
 INSERT INTO public.orders (id, customer_id, product_name_id, order_date, responsible_employee, delivery_location) VALUES (389, 334, 369, '2008-07-16', 302, 329);
 INSERT INTO public.orders (id, customer_id, product_name_id, order_date, responsible_employee, delivery_location) VALUES (390, 335, 370, '2015-07-15', 303, 330);
+INSERT INTO public.orders (id, customer_id, product_name_id, order_date, responsible_employee, delivery_location) VALUES (1001, 1001, 363, '2012-04-12', 303, 324);
 
 
 --
@@ -273,6 +275,8 @@ INSERT INTO public.users (id, first_name, last_name, location_id) VALUES (332, '
 INSERT INTO public.users (id, first_name, last_name, location_id) VALUES (333, 'Kareem', 'Tocco', 323);
 INSERT INTO public.users (id, first_name, last_name, location_id) VALUES (334, 'Allen', 'Stockman ', 324);
 INSERT INTO public.users (id, first_name, last_name, location_id) VALUES (335, 'Derick', 'Lonzo', 325);
+INSERT INTO public.users (id, first_name, last_name, location_id) VALUES (1000, 'ASASA', 'ASDADASD', 322);
+INSERT INTO public.users (id, first_name, last_name, location_id) VALUES (1001, 'France User', 'France User', 324);
 
 
 --
@@ -526,7 +530,7 @@ ALTER TABLE ONLY public.users
     ADD CONSTRAINT users_location FOREIGN KEY (location_id) REFERENCES public.locations(id);
 
 
--- Completed on 2019-05-16 23:10:49
+-- Completed on 2019-05-19 22:08:21
 
 --
 -- PostgreSQL database dump complete
