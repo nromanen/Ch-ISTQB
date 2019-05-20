@@ -5,7 +5,7 @@
 -- Dumped from database version 10.7
 -- Dumped by pg_dump version 10.7
 
--- Started on 2019-05-17 20:09:29
+-- Started on 2019-05-19 21:22:30
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -194,6 +194,11 @@ INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address,
 INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address, notes) VALUES (521, 306, '1991-05-01', '2016-12-16', '4604  Mulberry Lane', NULL);
 INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address, notes) VALUES (522, 306, '1992-11-17', '2017-01-12', '4925  Perine Street', NULL);
 INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address, notes) VALUES (523, 306, '1993-02-12', '2017-10-27', '4146  Powder House Road', NULL);
+INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address, notes) VALUES (595, 301, '1974-04-03', '1997-08-13', '1312  Wakefield Street', 'Halyna');
+INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address, notes) VALUES (596, 306, '1977-04-04', '2004-08-03', '3599  Hilltop Drive', 'Halyna');
+INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address, notes) VALUES (597, 301, '1977-12-22', '2009-01-28', '217  Union Street', 'Halyna');
+INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address, notes) VALUES (598, 306, '1980-01-21', '2013-02-18', '2839  Dancing Dove Lane', 'Halyna');
+INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address, notes) VALUES (599, 301, '1987-03-16', '2014-05-30', '3255  Parkway Drive', 'Halyna');
 
 
 --
@@ -351,6 +356,11 @@ INSERT INTO public.users (id, first_name, last_name, location_id) VALUES (520, '
 INSERT INTO public.users (id, first_name, last_name, location_id) VALUES (521, 'Lynda', 'Mouton', 327);
 INSERT INTO public.users (id, first_name, last_name, location_id) VALUES (522, 'Natasha', 'Serrato', 330);
 INSERT INTO public.users (id, first_name, last_name, location_id) VALUES (523, 'Johnson', 'Youssef', 322);
+INSERT INTO public.users (id, first_name, last_name, location_id) VALUES (595, 'Anna', 'Preslar', 321);
+INSERT INTO public.users (id, first_name, last_name, location_id) VALUES (596, 'Tyson', 'Netzer', 322);
+INSERT INTO public.users (id, first_name, last_name, location_id) VALUES (597, 'Debby', 'Brouillard', 323);
+INSERT INTO public.users (id, first_name, last_name, location_id) VALUES (598, 'Tamica', 'Brasil', 324);
+INSERT INTO public.users (id, first_name, last_name, location_id) VALUES (599, 'Dione', 'Acosta', 325);
 
 
 --
@@ -604,7 +614,7 @@ ALTER TABLE ONLY public.users
     ADD CONSTRAINT users_location FOREIGN KEY (location_id) REFERENCES public.locations(id);
 
 
--- Completed on 2019-05-17 20:09:29
+-- Completed on 2019-05-19 21:22:30
 
 --
 -- PostgreSQL database dump complete
