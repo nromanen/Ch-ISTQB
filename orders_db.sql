@@ -5,7 +5,7 @@
 -- Dumped from database version 10.7
 -- Dumped by pg_dump version 11.2
 
--- Started on 2019-05-19 22:08:20
+-- Started on 2019-05-27 18:27:26
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -22,7 +22,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- TOC entry 201 (class 1259 OID 41520)
+-- TOC entry 196 (class 1259 OID 41992)
 -- Name: customers; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -34,7 +34,7 @@ CREATE TABLE public.customers (
 ALTER TABLE public.customers OWNER TO postgres;
 
 --
--- TOC entry 196 (class 1259 OID 41505)
+-- TOC entry 197 (class 1259 OID 41995)
 -- Name: employees; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -50,7 +50,7 @@ CREATE TABLE public.employees (
 ALTER TABLE public.employees OWNER TO postgres;
 
 --
--- TOC entry 197 (class 1259 OID 41508)
+-- TOC entry 198 (class 1259 OID 42001)
 -- Name: locations; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -64,7 +64,7 @@ CREATE TABLE public.locations (
 ALTER TABLE public.locations OWNER TO postgres;
 
 --
--- TOC entry 202 (class 1259 OID 41523)
+-- TOC entry 199 (class 1259 OID 42007)
 -- Name: ordered_products; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -79,7 +79,7 @@ CREATE TABLE public.ordered_products (
 ALTER TABLE public.ordered_products OWNER TO postgres;
 
 --
--- TOC entry 199 (class 1259 OID 41514)
+-- TOC entry 200 (class 1259 OID 42013)
 -- Name: orders; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -96,7 +96,7 @@ CREATE TABLE public.orders (
 ALTER TABLE public.orders OWNER TO postgres;
 
 --
--- TOC entry 200 (class 1259 OID 41517)
+-- TOC entry 201 (class 1259 OID 42016)
 -- Name: products; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -112,7 +112,7 @@ CREATE TABLE public.products (
 ALTER TABLE public.products OWNER TO postgres;
 
 --
--- TOC entry 203 (class 1259 OID 41526)
+-- TOC entry 202 (class 1259 OID 42022)
 -- Name: products_categories; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -125,7 +125,7 @@ CREATE TABLE public.products_categories (
 ALTER TABLE public.products_categories OWNER TO postgres;
 
 --
--- TOC entry 198 (class 1259 OID 41511)
+-- TOC entry 203 (class 1259 OID 42028)
 -- Name: users; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -140,8 +140,8 @@ CREATE TABLE public.users (
 ALTER TABLE public.users OWNER TO postgres;
 
 --
--- TOC entry 2912 (class 0 OID 41520)
--- Dependencies: 201
+-- TOC entry 2907 (class 0 OID 41992)
+-- Dependencies: 196
 -- Data for Name: customers; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -154,8 +154,8 @@ INSERT INTO public.customers (user_id) VALUES (1001);
 
 
 --
--- TOC entry 2907 (class 0 OID 41505)
--- Dependencies: 196
+-- TOC entry 2908 (class 0 OID 41995)
+-- Dependencies: 197
 -- Data for Name: employees; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -170,8 +170,8 @@ INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address)
 
 
 --
--- TOC entry 2908 (class 0 OID 41508)
--- Dependencies: 197
+-- TOC entry 2909 (class 0 OID 42001)
+-- Dependencies: 198
 -- Data for Name: locations; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -188,8 +188,8 @@ INSERT INTO public.locations (id, city, country) VALUES (330, 'Antwerp', 'Belgiu
 
 
 --
--- TOC entry 2913 (class 0 OID 41523)
--- Dependencies: 202
+-- TOC entry 2910 (class 0 OID 42007)
+-- Dependencies: 199
 -- Data for Name: ordered_products; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -206,8 +206,8 @@ INSERT INTO public.ordered_products (orders_id, products_id, historical_price, q
 
 
 --
--- TOC entry 2910 (class 0 OID 41514)
--- Dependencies: 199
+-- TOC entry 2911 (class 0 OID 42013)
+-- Dependencies: 200
 -- Data for Name: orders; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -225,8 +225,8 @@ INSERT INTO public.orders (id, customer_id, product_name_id, order_date, respons
 
 
 --
--- TOC entry 2911 (class 0 OID 41517)
--- Dependencies: 200
+-- TOC entry 2912 (class 0 OID 42016)
+-- Dependencies: 201
 -- Data for Name: products; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -243,8 +243,8 @@ INSERT INTO public.products (id, product_name, product_category_id, unit_price, 
 
 
 --
--- TOC entry 2914 (class 0 OID 41526)
--- Dependencies: 203
+-- TOC entry 2913 (class 0 OID 42022)
+-- Dependencies: 202
 -- Data for Name: products_categories; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -255,8 +255,8 @@ INSERT INTO public.products_categories (id, category_name) VALUES (354, 'Clothin
 
 
 --
--- TOC entry 2909 (class 0 OID 41511)
--- Dependencies: 198
+-- TOC entry 2914 (class 0 OID 42028)
+-- Dependencies: 203
 -- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -280,7 +280,7 @@ INSERT INTO public.users (id, first_name, last_name, location_id) VALUES (1001, 
 
 
 --
--- TOC entry 2769 (class 2606 OID 41573)
+-- TOC entry 2751 (class 2606 OID 42035)
 -- Name: customers customers_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -289,7 +289,7 @@ ALTER TABLE ONLY public.customers
 
 
 --
--- TOC entry 2751 (class 2606 OID 41594)
+-- TOC entry 2754 (class 2606 OID 42037)
 -- Name: employees employees_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -298,7 +298,7 @@ ALTER TABLE ONLY public.employees
 
 
 --
--- TOC entry 2754 (class 2606 OID 41563)
+-- TOC entry 2757 (class 2606 OID 42039)
 -- Name: locations locations_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -307,7 +307,7 @@ ALTER TABLE ONLY public.locations
 
 
 --
--- TOC entry 2763 (class 2606 OID 41551)
+-- TOC entry 2764 (class 2606 OID 42041)
 -- Name: orders orders_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -316,7 +316,7 @@ ALTER TABLE ONLY public.orders
 
 
 --
--- TOC entry 2773 (class 2606 OID 41571)
+-- TOC entry 2770 (class 2606 OID 42043)
 -- Name: products_categories products_categories_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -325,7 +325,7 @@ ALTER TABLE ONLY public.products_categories
 
 
 --
--- TOC entry 2767 (class 2606 OID 41569)
+-- TOC entry 2768 (class 2606 OID 42045)
 -- Name: products products_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -334,7 +334,7 @@ ALTER TABLE ONLY public.products
 
 
 --
--- TOC entry 2757 (class 2606 OID 41553)
+-- TOC entry 2773 (class 2606 OID 42047)
 -- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -343,7 +343,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- TOC entry 2764 (class 1259 OID 41645)
+-- TOC entry 2765 (class 1259 OID 42048)
 -- Name: fki_category; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -351,7 +351,7 @@ CREATE INDEX fki_category ON public.products USING btree (product_category_id);
 
 
 --
--- TOC entry 2752 (class 1259 OID 41605)
+-- TOC entry 2755 (class 1259 OID 42049)
 -- Name: fki_chief; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -359,7 +359,7 @@ CREATE INDEX fki_chief ON public.employees USING btree (chief_id);
 
 
 --
--- TOC entry 2758 (class 1259 OID 41633)
+-- TOC entry 2759 (class 1259 OID 42050)
 -- Name: fki_customer; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -367,7 +367,7 @@ CREATE INDEX fki_customer ON public.orders USING btree (customer_id);
 
 
 --
--- TOC entry 2770 (class 1259 OID 41561)
+-- TOC entry 2752 (class 1259 OID 42051)
 -- Name: fki_customers; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -375,7 +375,7 @@ CREATE INDEX fki_customers ON public.customers USING btree (user_id);
 
 
 --
--- TOC entry 2759 (class 1259 OID 41714)
+-- TOC entry 2760 (class 1259 OID 42052)
 -- Name: fki_delivery; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -383,7 +383,7 @@ CREATE INDEX fki_delivery ON public.orders USING btree (delivery_location);
 
 
 --
--- TOC entry 2760 (class 1259 OID 41708)
+-- TOC entry 2761 (class 1259 OID 42053)
 -- Name: fki_employee; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -391,7 +391,7 @@ CREATE INDEX fki_employee ON public.orders USING btree (responsible_employee);
 
 
 --
--- TOC entry 2765 (class 1259 OID 41656)
+-- TOC entry 2766 (class 1259 OID 42054)
 -- Name: fki_location_id; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -399,7 +399,7 @@ CREATE INDEX fki_location_id ON public.products USING btree (location_id);
 
 
 --
--- TOC entry 2761 (class 1259 OID 41639)
+-- TOC entry 2762 (class 1259 OID 42055)
 -- Name: fki_product_name; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -407,7 +407,7 @@ CREATE INDEX fki_product_name ON public.orders USING btree (product_name_id);
 
 
 --
--- TOC entry 2771 (class 1259 OID 41617)
+-- TOC entry 2758 (class 1259 OID 42056)
 -- Name: fki_products; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -415,7 +415,7 @@ CREATE INDEX fki_products ON public.ordered_products USING btree (orders_id);
 
 
 --
--- TOC entry 2755 (class 1259 OID 41670)
+-- TOC entry 2771 (class 1259 OID 42057)
 -- Name: fki_users_location; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -423,7 +423,7 @@ CREATE INDEX fki_users_location ON public.users USING btree (location_id);
 
 
 --
--- TOC entry 2781 (class 2606 OID 41640)
+-- TOC entry 2783 (class 2606 OID 42058)
 -- Name: products category; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -432,7 +432,7 @@ ALTER TABLE ONLY public.products
 
 
 --
--- TOC entry 2775 (class 2606 OID 41600)
+-- TOC entry 2775 (class 2606 OID 42063)
 -- Name: employees chief; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -441,7 +441,7 @@ ALTER TABLE ONLY public.employees
 
 
 --
--- TOC entry 2783 (class 2606 OID 41574)
+-- TOC entry 2774 (class 2606 OID 42068)
 -- Name: customers customer; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -450,7 +450,7 @@ ALTER TABLE ONLY public.customers
 
 
 --
--- TOC entry 2777 (class 2606 OID 41628)
+-- TOC entry 2779 (class 2606 OID 42073)
 -- Name: orders customer; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -459,7 +459,7 @@ ALTER TABLE ONLY public.orders
 
 
 --
--- TOC entry 2780 (class 2606 OID 41709)
+-- TOC entry 2780 (class 2606 OID 42078)
 -- Name: orders delivery; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -468,7 +468,7 @@ ALTER TABLE ONLY public.orders
 
 
 --
--- TOC entry 2779 (class 2606 OID 41703)
+-- TOC entry 2781 (class 2606 OID 42083)
 -- Name: orders employee; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -477,7 +477,7 @@ ALTER TABLE ONLY public.orders
 
 
 --
--- TOC entry 2782 (class 2606 OID 41651)
+-- TOC entry 2784 (class 2606 OID 42088)
 -- Name: products location_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -486,7 +486,7 @@ ALTER TABLE ONLY public.products
 
 
 --
--- TOC entry 2784 (class 2606 OID 41618)
+-- TOC entry 2777 (class 2606 OID 42093)
 -- Name: ordered_products orders; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -495,7 +495,7 @@ ALTER TABLE ONLY public.ordered_products
 
 
 --
--- TOC entry 2778 (class 2606 OID 41634)
+-- TOC entry 2782 (class 2606 OID 42098)
 -- Name: orders product_name; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -504,7 +504,7 @@ ALTER TABLE ONLY public.orders
 
 
 --
--- TOC entry 2785 (class 2606 OID 41623)
+-- TOC entry 2778 (class 2606 OID 42103)
 -- Name: ordered_products products; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -513,7 +513,7 @@ ALTER TABLE ONLY public.ordered_products
 
 
 --
--- TOC entry 2774 (class 2606 OID 41595)
+-- TOC entry 2776 (class 2606 OID 42108)
 -- Name: employees users; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -522,7 +522,7 @@ ALTER TABLE ONLY public.employees
 
 
 --
--- TOC entry 2776 (class 2606 OID 41665)
+-- TOC entry 2785 (class 2606 OID 42113)
 -- Name: users users_location; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -530,7 +530,7 @@ ALTER TABLE ONLY public.users
     ADD CONSTRAINT users_location FOREIGN KEY (location_id) REFERENCES public.locations(id);
 
 
--- Completed on 2019-05-19 22:08:21
+-- Completed on 2019-05-27 18:27:27
 
 --
 -- PostgreSQL database dump complete
