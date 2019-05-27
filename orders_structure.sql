@@ -43,7 +43,8 @@ CREATE TABLE public.employees (
     chief_id integer,
     birth_date date,
     hire_date date,
-    address character varying
+    address character varying,
+	notes character varying
 );
 
 
