@@ -26,6 +26,17 @@ INSERT INTO public.locations (id, city, country) VALUES (5, 'Warsaw', 'Poland');
 INSERT INTO public.locations (id, city, country) VALUES (6, 'Bern', 'Switzerland');
 INSERT INTO public.locations (id, city, country) VALUES (7, 'Vienna', 'Austria');
 
+INSERT INTO public.locations (id, city, country) VALUES (101, 'Wien', 'Austria');
+INSERT INTO public.locations (id, city, country) VALUES (102, 'Graz', 'Austria');
+INSERT INTO public.locations (id, city, country) VALUES (103, 'Gliwice', 'Poland');
+INSERT INTO public.locations (id, city, country) VALUES (104, 'Budapest', 'Ungarn');
+INSERT INTO public.locations (id, city, country) VALUES (105, 'Klagenfurt', 'Austria');
+INSERT INTO public.locations (id, city, country) VALUES (106, 'Melburn', 'Australia');
+INSERT INTO public.locations (id, city, country) VALUES (107, 'Phoenix', 'USA');
+INSERT INTO public.locations (id, city, country) VALUES (108, 'LA', 'USA');
+INSERT INTO public.locations (id, city, country) VALUES (109, 'Lviv', 'Ukraine');
+INSERT INTO public.locations (id, city, country) VALUES (110, 'Oslo', 'Denmark');
+
 INSERT INTO public.products_categories (id, category_name) VALUES (351, 'Fruits');
 INSERT INTO public.products_categories (id, category_name) VALUES (352, 'Vegetables');
 INSERT INTO public.products_categories (id, category_name) VALUES (353, 'Electronics');
@@ -104,7 +115,21 @@ INSERT INTO public.users (id, first_name, last_name, location_id) VALUES (432, '
 INSERT INTO public.users (id, first_name, last_name, location_id) VALUES (433, 'Zena', 'Stratford', 424);
 INSERT INTO public.users (id, first_name, last_name, location_id) VALUES (434, 'Rossana', 'Yorke', 425);
 INSERT INTO public.users (id, first_name, last_name, location_id) VALUES (435, 'Noble', 'Toews', 425);
-
+INSERT INTO public.users (id, first_name, last_name, location_id) VALUES (111, 'Liz', 'Lafollette', 101);
+INSERT INTO public.users (id, first_name, last_name, location_id) VALUES (112, 'Sierra', 'Tresher', 102);
+INSERT INTO public.users (id, first_name, last_name, location_id) VALUES (113, 'Mike', 'Nielsen', 103);
+INSERT INTO public.users (id, first_name, last_name, location_id) VALUES (114, 'Rick', 'Grimes', 104);
+INSERT INTO public.users (id, first_name, last_name, location_id) VALUES (115, 'Artur', 'King', 105);
+INSERT INTO public.users (id, first_name, last_name, location_id) VALUES (116, 'Konan', 'Doile', 106);
+INSERT INTO public.users (id, first_name, last_name, location_id) VALUES (117, 'Kirk', 'Hammet', 107);
+INSERT INTO public.users (id, first_name, last_name, location_id) VALUES (118, 'Dirk', 'Parkinson', 108);
+INSERT INTO public.users (id, first_name, last_name, location_id) VALUES (119, 'Mike', 'Bill', 109);
+INSERT INTO public.users (id, first_name, last_name, location_id) VALUES (120, 'Shakil', 'Neil', 110);
+INSERT INTO public.users (id, first_name, last_name, location_id) VALUES (121, 'Duck', 'Olafson', 101);
+INSERT INTO public.users (id, first_name, last_name, location_id) VALUES (122, 'Gunther', 'Osaka', 102);
+INSERT INTO public.users (id, first_name, last_name, location_id) VALUES (123, 'Danie', 'Ogren', 103);
+INSERT INTO public.users (id, first_name, last_name, location_id) VALUES (124, 'Troy', 'Florey', 104);
+INSERT INTO public.users (id, first_name, last_name, location_id) VALUES (125, 'Foster', 'Mickey', 105);
 
 INSERT INTO public.customers (user_id) VALUES (331);
 INSERT INTO public.customers (user_id) VALUES (332);
@@ -127,7 +152,11 @@ INSERT INTO public.customers (user_id) VALUES (514);
 INSERT INTO public.customers (user_id) VALUES (515);
 INSERT INTO public.customers (user_id) VALUES (516);
 INSERT INTO public.customers (user_id) VALUES (517);
-
+INSERT INTO public.customers (user_id) VALUES (123);
+INSERT INTO public.customers (user_id) VALUES (124);
+INSERT INTO public.customers (user_id) VALUES (125);
+INSERT INTO public.customers (user_id) VALUES (121);
+INSERT INTO public.customers (user_id) VALUES (122);
 
 
 
@@ -165,6 +194,16 @@ INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address,
 INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address, notes) VALUES (598, 306, '1980-01-21', '2013-02-18', '2839  Dancing Dove Lane', 'Halyna');
 INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address, notes) VALUES (599, 301, '1987-03-16', '2014-05-30', '3255  Parkway Drive', 'Halyna');
 
+INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address) VALUES (112, 111, '1972-05-23', '1983-06-15', '4943  John Daniel Drive');
+INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address) VALUES (113, 111, '1973-06-23', '1984-06-20', '4846  Haul Road');
+INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address) VALUES (114, 111, '1973-08-22', '1985-06-06', '1976  Gambler Lane');
+INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address) VALUES (115, 111, '1980-10-12', '1981-07-06', '1744  Drainer Avenue');
+INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address) VALUES (117, 111, '1975-10-11', '1990-09-10', '120  Camel Back Road');
+INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address) VALUES (118, 116, '1945-10-10', '1990-09-09', '3266  Monroe Street');
+INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address) VALUES (119, 116, '1950-10-10', '1990-11-11', '2553  Maryland Avenue');
+INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address) VALUES (120, 116, '1960-12-12', '1990-11-12', '3008  Ferry Street');
+INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address) VALUES (121, 116, '1970-08-13', '1986-11-11', '2214  Private Lane');
+INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address) VALUES (122, 116, '1972-03-04', '1992-05-05', '2838  Ashton Lane');
 
 
 INSERT INTO public.products (id, product_name, product_category_id, unit_price, location_id) VALUES (366, 'Mustard greens', 352, 9, 326);
@@ -206,6 +245,17 @@ INSERT INTO public.products (id, product_name, product_category_id, unit_price, 
 INSERT INTO public.products (id, product_name, product_category_id, unit_price, location_id) VALUES (509, 'Juice', 511, 3, 328);
 INSERT INTO public.products (id, product_name, product_category_id, unit_price, location_id) VALUES (510, 'Chanderlier', 353, 120, 329);
 
+INSERT INTO public.products (id, product_name, product_category_id, unit_price, location_id) VALUES (140, 'tomato', 352, 3, 101);
+INSERT INTO public.products (id, product_name, product_category_id, unit_price, location_id) VALUES (141, 'apple', 351, 2, 102);
+INSERT INTO public.products (id, product_name, product_category_id, unit_price, location_id) VALUES (142, 'TV', 353, 300, 103);
+INSERT INTO public.products (id, product_name, product_category_id, unit_price, location_id) VALUES (143, 'Socks', 354, 5, 105);
+INSERT INTO public.products (id, product_name, product_category_id, unit_price, location_id) VALUES (144, 'Cherry', 351, 1, 106);
+INSERT INTO public.products (id, product_name, product_category_id, unit_price, location_id) VALUES (145, 'Carrot', 352, 2, 107);
+INSERT INTO public.products (id, product_name, product_category_id, unit_price, location_id) VALUES (146, 'Laptop', 353, 700, 108);
+INSERT INTO public.products (id, product_name, product_category_id, unit_price, location_id) VALUES (147, 'Dress', 354, 60, 109);
+INSERT INTO public.products (id, product_name, product_category_id, unit_price, location_id) VALUES (148, 'Strawberry', 351, 4, 110);
+INSERT INTO public.products (id, product_name, product_category_id, unit_price, location_id) VALUES (149, 'Cucumber', 352, 3, 101);
+INSERT INTO public.products (id, product_name, product_category_id, unit_price, location_id) VALUES (150, 'Ipad', 353, 800, 102);
 
 INSERT INTO public.orders (id, customer_id, product_name_id, order_date, responsible_employee, delivery_location) VALUES (381, 331, 361, '1998-08-10', 302, 321);
 INSERT INTO public.orders (id, customer_id, product_name_id, order_date, responsible_employee, delivery_location) VALUES (382, 332, 362, '2000-03-03', 303, 322);
@@ -245,6 +295,16 @@ INSERT INTO public.orders (id, customer_id, product_name_id, order_date, respons
 INSERT INTO public.orders (id, customer_id, product_name_id, order_date, responsible_employee, delivery_location) VALUES (525, 515, 502, '2014-02-24', 519, 322);
 INSERT INTO public.orders (id, customer_id, product_name_id, order_date, responsible_employee, delivery_location) VALUES (526, 516, 503, '2014-07-01', 520, 321);
 
+INSERT INTO public.orders (id, customer_id, product_name_id, order_date, responsible_employee, delivery_location) VALUES (181, 121, 140, '1998-08-10', 112, NULL);
+INSERT INTO public.orders (id, customer_id, product_name_id, order_date, responsible_employee, delivery_location) VALUES (182, 122, 141, '1997-07-09', 113, NULL);
+INSERT INTO public.orders (id, customer_id, product_name_id, order_date, responsible_employee, delivery_location) VALUES (183, 123, 142, '2018-02-03', 114, NULL);
+INSERT INTO public.orders (id, customer_id, product_name_id, order_date, responsible_employee, delivery_location) VALUES (184, 124, 143, '2017-03-12', 115, NULL);
+INSERT INTO public.orders (id, customer_id, product_name_id, order_date, responsible_employee, delivery_location) VALUES (185, 125, 144, '2011-09-09', 117, NULL);
+INSERT INTO public.orders (id, customer_id, product_name_id, order_date, responsible_employee, delivery_location) VALUES (186, 121, 145, '2010-10-10', 118, NULL);
+INSERT INTO public.orders (id, customer_id, product_name_id, order_date, responsible_employee, delivery_location) VALUES (187, 122, 146, '2017-10-10', 119, NULL);
+INSERT INTO public.orders (id, customer_id, product_name_id, order_date, responsible_employee, delivery_location) VALUES (188, 123, 147, '2016-11-11', 120, NULL);
+INSERT INTO public.orders (id, customer_id, product_name_id, order_date, responsible_employee, delivery_location) VALUES (189, 124, 148, '2015-11-12', 112, NULL);
+INSERT INTO public.orders (id, customer_id, product_name_id, order_date, responsible_employee, delivery_location) VALUES (190, 125, 149, '2014-10-10', 113, NULL);
 
 INSERT INTO public.ordered_products (orders_id, products_id, historical_price, quantity) VALUES (381, 361, 0.1, 3);
 INSERT INTO public.ordered_products (orders_id, products_id, historical_price, quantity) VALUES (382, 362, 0.1, 4);
@@ -281,6 +341,16 @@ INSERT INTO public.ordered_products (orders_id, products_id, historical_price, q
 INSERT INTO public.ordered_products (orders_id, products_id, historical_price, quantity) VALUES (533, 510, 90, 2);
 INSERT INTO public.ordered_products (orders_id, products_id, historical_price, quantity) VALUES (524, 501, 2, 3);
 INSERT INTO public.ordered_products (orders_id, products_id, historical_price, quantity) VALUES (525, 502, 0.5, 2);
+INSERT INTO public.ordered_products (orders_id, products_id, historical_price, quantity) VALUES (181, 140, 0.2, 3);
+INSERT INTO public.ordered_products (orders_id, products_id, historical_price, quantity) VALUES (182, 141, 0.3, 4);
+INSERT INTO public.ordered_products (orders_id, products_id, historical_price, quantity) VALUES (183, 142, 0.4, 1);
+INSERT INTO public.ordered_products (orders_id, products_id, historical_price, quantity) VALUES (184, 143, 2, 2);
+INSERT INTO public.ordered_products (orders_id, products_id, historical_price, quantity) VALUES (185, 144, 1.1, 3);
+INSERT INTO public.ordered_products (orders_id, products_id, historical_price, quantity) VALUES (186, 145, 1, 2);
+INSERT INTO public.ordered_products (orders_id, products_id, historical_price, quantity) VALUES (187, 146, 1.1, 3);
+INSERT INTO public.ordered_products (orders_id, products_id, historical_price, quantity) VALUES (188, 147, 2, 2);
+INSERT INTO public.ordered_products (orders_id, products_id, historical_price, quantity) VALUES (189, 148, 3, 2);
+INSERT INTO public.ordered_products (orders_id, products_id, historical_price, quantity) VALUES (190, 149, 4, 2);
 
 
 
