@@ -5,7 +5,7 @@
 -- Dumped from database version 10.7
 -- Dumped by pg_dump version 11.2
 
--- Started on 2019-05-17 20:09:37
+-- Started on 2019-05-27 18:56:38
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -596,7 +596,7 @@ ALTER TABLE ONLY public.users
     ADD CONSTRAINT users_location FOREIGN KEY (location_id) REFERENCES public.locations(id);
 
 
--- Completed on 2019-05-17 20:09:41
+-- Completed on 2019-05-27 18:56:41
 
 --
 -- PostgreSQL database dump complete
