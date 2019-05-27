@@ -132,14 +132,14 @@ INSERT INTO public.customers (user_id) VALUES (517);
 
 
 
-INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address) VALUES (302, 301, '1971-02-20', '1994-05-23', '1496  Pooz Street');
-INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address) VALUES (303, 301, '1971-05-27', '1994-09-29', '2134  Woodland Drive');
-INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address) VALUES (304, 301, '1976-01-29', '1994-11-17', '600  Cimmaron Road');
-INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address) VALUES (305, 301, '1981-05-11', '2007-03-10', '411  West Drive');
-INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address) VALUES (307, 306, '1984-03-20', '2004-03-10', '2929  Bassel Street');
-INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address) VALUES (308, 306, '1985-04-09', '2007-04-13', '2111  Meadowcrest Lane');
-INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address) VALUES (309, 306, '1989-01-26', '2010-07-13', '3990  High Meadow Lane');
-INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address) VALUES (310, 306, '1991-07-22', '2010-02-27', '3494  Cinnamon Lane');
+INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address, notes) VALUES (302, 301, '1971-02-20', '1994-05-23', '1496  Pooz Street', NULL);
+INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address, notes) VALUES (303, 301, '1971-05-27', '1994-09-29', '2134  Woodland Drive', NULL);
+INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address, notes) VALUES (304, 301, '1976-01-29', '1994-11-17', '600  Cimmaron Road', NULL);
+INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address, notes) VALUES (305, 301, '1981-05-11', '2007-03-10', '411  West Drive', NULL);
+INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address, notes) VALUES (307, 306, '1984-03-20', '2004-03-10', '2929  Bassel Street', NULL);
+INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address, notes) VALUES (308, 306, '1985-04-09', '2007-04-13', '2111  Meadowcrest Lane', NULL);
+INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address, notes) VALUES (309, 306, '1989-01-26', '2010-07-13', '3990  High Meadow Lane', NULL);
+INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address, notes) VALUES (310, 306, '1991-07-22', '2010-02-27', '3494  Cinnamon Lane', NULL);
 INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address) VALUES (401, 402, '1972-03-21', '1998-08-30', '1568  Pooz Rooreet');
 INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address) VALUES (403, 402, '1975-06-15', '1999-09-29', '3154  Myra Street');
 INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address) VALUES (404, 402, '1976-02-22', '2000-09-15', '879  Buck Drive');
@@ -152,17 +152,18 @@ INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address)
 INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address) VALUES (8, 309, '1980-05-02', '2010-07-05', '9  Bassel Street');
 INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address) VALUES (9, 8, '1984-06-01', '2011-03-06', '292  Bassel Street');
 INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address) VALUES (10, 310, '1986-04-03', '1012-03-03', '2  Bassel Street');
-INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address) VALUES (518, 301, '1986-08-21', '2014-10-08', '2154  Harley Vincent Drive');
-INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address) VALUES (519, 301, '1989-05-03', '2015-11-16', '3115  Brownton Road');
-INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address) VALUES (520, 301, '1991-02-18', '2016-01-28', '3467  Emily Renzelli Boulevard');
-INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address) VALUES (521, 306, '1991-05-01', '2016-12-16', '4604  Mulberry Lane');
-INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address) VALUES (522, 306, '1992-11-17', '2017-01-12', '4925  Perine Street');
-INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address) VALUES (523, 306, '1993-02-12', '2017-10-27', '4146  Powder House Road');
-INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address) VALUES (595, 301, '1974-04-03', '1997-08-13', '1312  Wakefield Street');
-INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address) VALUES (596, 306, '1977-04-04', '2004-08-03', '3599  Hilltop Drive');
-INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address) VALUES (597, 301, '1977-12-22', '2009-01-28', '217  Union Street');
-INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address) VALUES (598, 306, '1980-01-21', '2013-02-18', '2839  Dancing Dove Lane');
-INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address) VALUES (599, 301, '1987-03-16', '2014-05-30', '3255  Parkway Drive');
+
+INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address, notes) VALUES (518, 301, '1986-08-21', '2014-10-08', '2154  Harley Vincent Drive', NULL);
+INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address, notes) VALUES (519, 301, '1989-05-03', '2015-11-16', '3115  Brownton Road', NULL);
+INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address, notes) VALUES (520, 301, '1991-02-18', '2016-01-28', '3467  Emily Renzelli Boulevard', NULL);
+INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address, notes) VALUES (521, 306, '1991-05-01', '2016-12-16', '4604  Mulberry Lane', NULL);
+INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address, notes) VALUES (522, 306, '1992-11-17', '2017-01-12', '4925  Perine Street', NULL);
+INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address, notes) VALUES (523, 306, '1993-02-12', '2017-10-27', '4146  Powder House Road', NULL);
+INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address, notes) VALUES (595, 301, '1974-04-03', '1997-08-13', '1312  Wakefield Street', 'Halyna');
+INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address, notes) VALUES (596, 306, '1977-04-04', '2004-08-03', '3599  Hilltop Drive', 'Halyna');
+INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address, notes) VALUES (597, 301, '1977-12-22', '2009-01-28', '217  Union Street', 'Halyna');
+INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address, notes) VALUES (598, 306, '1980-01-21', '2013-02-18', '2839  Dancing Dove Lane', 'Halyna');
+INSERT INTO public.employees (user_id, chief_id, birth_date, hire_date, address, notes) VALUES (599, 301, '1987-03-16', '2014-05-30', '3255  Parkway Drive', 'Halyna');
 
 
 
